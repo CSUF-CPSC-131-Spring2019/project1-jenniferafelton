@@ -4,4 +4,4 @@
 MUST EDIT WITH YOUR OWN NAME AND EMAIL IN THE SAME FORMAT
 
 Credit:
-- Ada Lovelace adalovelace@csu.fullerton.edu
+- Jennifer Felton jfelton@csu.fullerton.edu
