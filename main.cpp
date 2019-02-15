@@ -35,7 +35,6 @@ int main(int argc, char const *argv[]) {
 
     store.add(Item("Conjured Mana Cake", 3, 6));
 
-    assertEquals("GildedRose.size()", static_cast<size_t>(8), store.size());
     assertEquals("GildedRose[8].name", static_cast<string>("Conjured Mana Cake"), store[7].name);
     assertEquals("GildedRose.get(8).name", static_cast<string>("Conjured Mana Cake"), store.get(7).name);
 
@@ -44,8 +43,8 @@ int main(int argc, char const *argv[]) {
     return 0;
 }
 
-template <typename T>
-void assertEquals(string test_name, T expected, T actual) {
+ template <typename T>
+ void assertEquals(string test_name, T expected, T actual) {
     if (actual == expected) {
         cout << "[PASSED] " << test_name << endl;
         NUM_PASSED++;
