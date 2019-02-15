@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 using std::string;
 
 // This is already done for you...
@@ -17,18 +18,33 @@ Item::Item(string new_name, int new_sellIn, int new_quality)
 }
 
 
-// This class is incomplete...
+// This class is incomplete...(not anymore)
 class GildedRose {
 private:
-    // Add something to hold at least 10 items
+std::vector <Item> inventory;
 
 public:
-    GildedRose();
-    ~GildedRose();
+    GildedRose(){
+    }
 
-    size_t size() const;
-    Item& get(size_t);
-    void add(const Item&);
+    ~GildedRose(){
+      std::cout<<"Thanks for Shopping at Gilded Rose!"<<std::endl;
+      inventory.clear();
+    }
 
-    Item& operator[](size_t);
+    size_t size() const{ //get number of items for sale
+      return inventory.size();
+    }
+
+    Item& get(size_t space){   //get item at specified location
+        return inventory[space];
+    }
+
+    void add(const Item& thingForSale){  //add item for sale
+    inventory.push_back(thingForSale);
+    }
+
+    Item& operator[](size_t space){ //get item at specific location
+      return inventory[space];
+    }
 };
